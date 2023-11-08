@@ -10,7 +10,7 @@ Install this package and build as below:
 
 Clone the repo into anywhere you want.
 ```bash 
-https://github.com/yusufy1ld1z/itusct_autonomus.git
+git clone https://github.com/yusufy1ld1z/itusct_autonomous.git
 cd itusct_autonomous/itusct_autonomous_weekly# // replace # with week number
 mkdir build && cd build
 cmake ..
