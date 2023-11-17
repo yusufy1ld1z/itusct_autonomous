@@ -15,4 +15,5 @@ cd itusct_autonomous/itusct_autonomous_weekly# // replace # with week number
 mkdir build && cd build
 cmake ..
 cmake --build .
+./{projectName}/{projectName}
 ```
