@@ -9,7 +9,7 @@
 #include <cstdlib>
 
 int main() {
-  std::string file_name = "/home/yildiz/Desktop/gae/autonomous_assignments/itusct_autonomous_weekly5/assignment5_solutions/menuBot/menu.json";
+  std::string file_name = "/your_file_path";
   std::vector<std::vector<std::shared_ptr<Menu::MenuItem>>> availableMenu(6);
   try {
     Interface::readFromJSON(file_name, availableMenu);
