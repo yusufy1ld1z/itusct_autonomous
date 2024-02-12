@@ -1,6 +1,8 @@
-//
-// Created by yildiz on 10.02.2024.
-//
+/**
+  ITU Solar Car Team - Autonomous Weekly Assignment 5
+  Author: Yusuf Yıldız
+  Date: 12.02.2024
+*/
 
 #include "user.hpp"
 
@@ -11,7 +13,7 @@ namespace User{
     setGender(_gender);
     user_menu = std::make_shared<Menu::Menu>();
   }
-// TODO: preference'lar degistirilebilir olmali, olumsuz secenekler icin de set et
+
   bool User::approveMenu() {
     char confirm;
     for (int i = 0; i < static_cast<int>(Menu::DishType::NUM_DISH_TYPES); i++) {

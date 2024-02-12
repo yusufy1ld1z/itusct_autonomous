@@ -1,10 +1,11 @@
-//
-// Created by yildiz on 08.02.2024.
-//
+/**
+  ITU Solar Car Team - Autonomous Weekly Assignment 5
+  Author: Yusuf Yıldız
+  Date: 12.02.2024
+*/
 
 #include <menu.hpp>
 #include <interface.hpp>
-#include <user.hpp>
 #include <cstdlib>
 
 int main() {
@@ -19,6 +20,11 @@ int main() {
   }
   std::shared_ptr<Menu::Menu> available_menu = std::make_shared<Menu::Menu>(availableMenu);
 
+  auto is_numeric = [](const std::string &str) -> bool { // check whether the string is numeric or not, this function also controls the negative numbers
+    return !str.empty() && std::find_if(str.begin(),
+                                        str.end(), [](unsigned char c) { return !std::isdigit(c); }) == str.end(); // control the string digit by digit to be numeric
+  };
+
   std::cout << "Welcome to the Menu Bot!" << std::endl;
   std::cout << "Please enter your first name: ";
   std::string firstName;
@@ -29,18 +35,24 @@ int main() {
   std::cout << "Please select your gender to address you by: \n1. MR\n2. MRS" << std::endl;
   int gender_choice;
   User::Gender genderToAddress = User::Gender::MR;
-  std::cin >> gender_choice;
+  std::string gender_str;
+  std::cin >> gender_str;
 
-  if (gender_choice == 1) genderToAddress = User::Gender::MR;
-  else if (gender_choice == 2) genderToAddress = User::Gender::MRS;
-  else std::cout << "Invalid input. Default value (Mr) assigned" << std::endl;
+  if (is_numeric(gender_str)){ // input validation
+    gender_choice = std::stoi(gender_str);
+
+    if (gender_choice == 1) genderToAddress = User::Gender::MR;
+    else if (gender_choice == 2) genderToAddress = User::Gender::MRS;
+    else {std::cout << "Invalid input. Default value (Mr) assigned" << std::endl;}
+    sleep(1);
+
+  } else {
+    std::cout << "Invalid input. Default value (Mr) assigned" << std::endl;
+    sleep(1);
+  }
+
   User::User user(firstName, lastName, genderToAddress);
   sleep(1);
-
-  auto is_numeric = [](const std::string &str) -> bool { // check whether the string is numeric or not, this function also controls the negative numbers
-    return !str.empty() && std::find_if(str.begin(),
-                                        str.end(), [](unsigned char c) { return !std::isdigit(c); }) == str.end(); // control the string digit by digit to be numeric
-  };
 
   while(true) {
     system("clear");
@@ -62,7 +74,7 @@ int main() {
     std::cin >> choice_str;
     int choice;
 
-    if (is_numeric(choice_str)){
+    if (is_numeric(choice_str)){ // input validation
       if (std::stoi(choice_str) < 1 || std::stoi(choice_str) > 8){
         std::cout << "Invalid input. Please try again." << std::endl;
         sleep(1);
@@ -91,7 +103,7 @@ int main() {
         std::cin >> type_str;
         int type;
 
-        if (is_numeric(type_str)){
+        if (is_numeric(type_str)){ // input validation
           if (std::stoi(type_str) < 1 || std::stoi(type_str) > 7){
             std::cout << "Invalid input. Please try again." << std::endl;
             sleep(1);
@@ -188,6 +200,8 @@ int main() {
             case Menu::DishType::DESSERT:
               type = "Desserts";
               break;
+            default:
+              break;
           }
 
           if(user.getMenu()->getMenu()[i].empty()){
@@ -207,17 +221,17 @@ int main() {
           continue;
         }
         std::cout << "Which item would you like to remove?" << std::endl;
-        std::string choice_str;
-        std::cin >> choice_str;
-        int del_choice;
+        std::string remove_str;
+        std::cin >> remove_str;
+        int remove_choice;
 
-        if (is_numeric(choice_str)){
-          if (std::stoi(choice_str) < 1 || std::stoi(choice_str) > 7){
+        if (is_numeric(remove_str)){ // input validation
+          if (std::stoi(remove_str) < 1 || std::stoi(remove_str) > 7){
             std::cout << "Invalid input. Please try again." << std::endl;
             sleep(1);
             continue;
           }
-          del_choice = std::stoi(choice_str);
+          remove_choice = std::stoi(remove_str);
         } else {
           std::cout << "Invalid input. Please try again." << std::endl;
           sleep(1);
@@ -225,13 +239,13 @@ int main() {
         }
 
         std::cout << "Chosen item is: " << std::endl;
-        user.getMenu()->findMenuItemByIndex(del_choice)->printDish();
+        user.getMenu()->findMenuItemByIndex(remove_choice)->printDish();
         std::cout << "\nAre you sure to remove this item?(Y or N)" << std::endl;
         char confirm;
         std::cin >> confirm;
 
         if (confirm == 'Y' || confirm == 'y') {
-          user.getMenu()->removeMenuItem(user.getMenu()->findMenuItemByIndex(del_choice)->getName());
+          user.getMenu()->removeMenuItem(user.getMenu()->findMenuItemByIndex(remove_choice)->getName());
           std::cout << "Item removed successfully!" << std::endl;
         } else {
           std::cout << "Item did not removed!" << std::endl;
@@ -272,7 +286,7 @@ int main() {
 
         std::cin >> type_str;
 
-        if (is_numeric(type_str)){
+        if (is_numeric(type_str)){ // input validation
           if (std::stoi(type_str) < 1 || std::stoi(type_str) > 7){
             std::cout << "Invalid input. Please try again." << std::endl;
             sleep(1);
@@ -306,11 +320,13 @@ int main() {
             case Menu::Taste::SAVORY:
               std::cout << "Savory: ";
               break;
+            default:
+              break;
           }
           std::string taste_str;
           std::cin >> taste_str;
 
-          if (is_numeric(taste_str)){
+          if (is_numeric(taste_str)){ // input validation
             if (std::stoi(taste_str) < 0 || std::stoi(taste_str) > 10){
               std::cout << "Invalid input. Please try again." << std::endl;
               sleep(1);
@@ -372,12 +388,13 @@ int main() {
           std::string taste_str;
           std::cin >> taste_str;
 
-          if (is_numeric(taste_str)){
+          if (is_numeric(taste_str)){ // input validation
             if (std::stoi(taste_str) < 0 || std::stoi(taste_str) > 10){
               std::cout << "Invalid input. Please try again." << std::endl;
               sleep(1);
               break;
             }
+            validator++;
             taste_balance[i] = std::stoi(taste_str);
           } else {
             std::cout << "Invalid input. Please try again." << std::endl;
@@ -414,7 +431,6 @@ int main() {
       case 8: { // exit
         std::cout << "Goodbye!" << std::endl;
         return 0;
-        break;
       }
 
       default: {
@@ -425,5 +441,4 @@ int main() {
     }
 
   }
-  return 0;
 }

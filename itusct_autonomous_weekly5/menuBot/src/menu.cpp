@@ -1,6 +1,8 @@
-//
-// Created by yildiz on 07.02.2024.
-//
+/**
+  ITU Solar Car Team - Autonomous Weekly Assignment 5
+  Author: Yusuf Yıldız
+  Date: 12.02.2024
+*/
 
 #include "menu.hpp"
 
@@ -147,15 +149,15 @@ namespace Menu {
   }
 
   void Menu::updateTasteBalanceAndPrice() {
-    std::vector<int> taste_balance(static_cast<int>(Taste::NUM_TASTES), 0);
-    double total_price = 0;
+    std::vector<int> taste_bal(static_cast<int>(Taste::NUM_TASTES), 0);
+    double tot_price = 0;
     int item_count = 0;
     for (int i = 0; i < static_cast<int>(DishType::NUM_DISH_TYPES); i++) {
       for (auto &item: this->menu[i]) {
-        total_price += item->getPrice();
+        tot_price += item->getPrice();
         item_count++;
         for (int j = 0; j < static_cast<int>(Taste::NUM_TASTES); j++) {
-          taste_balance[j] += item->getTasteBalance().tasteBalance()[j];
+          taste_bal[j] += item->getTasteBalance().tasteBalance()[j];
         }
       }
     }
@@ -164,10 +166,10 @@ namespace Menu {
       this->setTotalPrice(0);
     } else {
       for (int i = 0; i < static_cast<int>(Taste::NUM_TASTES); i++) {
-        taste_balance[i] = std::round(taste_balance[i] /= item_count);
+        taste_bal[i] = std::round(taste_bal[i] /= item_count);
       }
-      this->setTasteBalance(taste_balance);
-      this->setTotalPrice(total_price);
+      this->setTasteBalance(taste_bal);
+      this->setTotalPrice(tot_price);
     }
   }
 } // End namespace Menu

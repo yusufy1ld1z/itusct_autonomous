@@ -1,6 +1,9 @@
-//
-// Created by yildiz on 09.02.2024.
-//
+/**
+  ITU Solar Car Team - Autonomous Weekly Assignment 5
+  Author: Yusuf Yıldız
+  Date: 12.02.2024
+*/
+
 #include <menu.hpp>
 #include <interface.hpp>
 

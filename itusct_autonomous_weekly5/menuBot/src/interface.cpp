@@ -1,6 +1,9 @@
-//
-// Created by yildiz on 07.02.2024.
-//
+/**
+  ITU Solar Car Team - Autonomous Weekly Assignment 5
+  Author: Yusuf Yıldız
+  Date: 12.02.2024
+*/
+
 #include "interface.hpp"
 
 namespace Interface{
@@ -93,68 +96,6 @@ namespace Interface{
     }
   }
 
-  std::shared_ptr<Menu::MenuItem> suggestMenuItem(std::shared_ptr<Menu::Menu>& _available_menu, Menu::TasteBalance _taste_balance, Menu::DishType _type) {
-    double minDistance = std::numeric_limits<double>::max();
-    std::shared_ptr<Menu::MenuItem> suggested_menu_item;
-
-    std::cout << "TEST SUGGEST ITEM" << std::endl;
-    for (auto& item : _available_menu->getMenu()[static_cast<int>(_type)]){
-      double distance = calculateDistance(_taste_balance, item->getTasteBalance());
-      if (distance < minDistance) {
-        minDistance = distance;
-        suggested_menu_item = item;
-      }
-      else if (distance == minDistance) {
-        double currentCovariance = calculateCovariance(_taste_balance, item->getTasteBalance());
-        double suggestedCovariance = calculateCovariance(_taste_balance, suggested_menu_item->getTasteBalance());
-        if (currentCovariance < suggestedCovariance) {
-          suggested_menu_item = item;
-        } else {
-          continue;
-        }
-      }
-    }
-
-    return suggested_menu_item;
-  }
-
-  void generatePermutations(std::vector<std::vector<int>>& _permutations, std::vector<int>& _indices, int _level, const std::vector<int>& _max_sizes){
-    // std::cout << "TEST GENERATE PERM" << std::endl;
-
-    if (_level == _indices.size()) {
-      _permutations.push_back(_indices);
-      return;
-    }
-    for (int i = 0; i <= _max_sizes[_level]; ++i) {
-      _indices[_level] = i;
-      generatePermutations(_permutations, _indices, _level + 1, _max_sizes);
-    }
-  }
-
-  std::vector<std::shared_ptr<Menu::Menu>> generateMenuItemPermutations(std::shared_ptr<Menu::Menu>& _menu){
-    std::cout << "TEST GENERATE MENU ITEM PERM" << std::endl;
-
-    std::vector<std::shared_ptr<Menu::Menu>> all_menu_item_permutations;
-    std::vector<std::vector<int>> all_permutations;
-    std::vector<int> indices(_menu->getMenu().size(), 0);
-    std::vector<int> max_sizes(_menu->getMenu().size());
-    for (int i = 0; i < static_cast<int>(Menu::DishType::NUM_DISH_TYPES); i++)  {
-      max_sizes[i] = _menu->getMenu()[i].size() - 1;
-    }
-    generatePermutations(all_permutations, indices, 0, max_sizes);
-
-    std::cout << "TEST GENERATE MENU ITEM PERM 2" << std::endl;
-    for (int i = 0; i < all_permutations.size(); i++) {
-      std::vector<std::vector<std::shared_ptr<Menu::MenuItem>>> permutation_menu(static_cast<int>(Menu::DishType::NUM_DISH_TYPES));
-      for (int j = 0; j < static_cast<int>(Menu::DishType::NUM_DISH_TYPES); j++) {
-        permutation_menu[j].push_back(_menu->getMenu()[j][all_permutations[i][j]]);
-      }
-      all_menu_item_permutations.push_back(std::make_shared<Menu::Menu>(permutation_menu));
-    }
-
-    return all_menu_item_permutations;
-  }
-
   double calculateDistance(const Menu::TasteBalance& _balance1, const Menu::TasteBalance& _balance2) {
     return std::sqrt(std::pow(_balance1.sweet - _balance2.sweet, 2) +
                      std::pow(_balance1.sour - _balance2.sour, 2) +
@@ -176,9 +117,64 @@ namespace Interface{
     return covariance;
   }
 
-  // TODO: Menu::Menu objesine gore tekrar yaz
+  void generatePermutations(std::vector<std::vector<int>>& _permutations, std::vector<int>& _indices, int _level, const std::vector<int>& _max_sizes){
+    if (_level == _indices.size()) {
+      _permutations.push_back(_indices);
+      return;
+    }
+    for (int i = 0; i <= _max_sizes[_level]; ++i) {
+      _indices[_level] = i;
+      generatePermutations(_permutations, _indices, _level + 1, _max_sizes);
+    }
+  }
+
+  std::vector<std::shared_ptr<Menu::Menu>> generateMenuItemPermutations(std::shared_ptr<Menu::Menu>& _menu){
+
+    std::vector<std::shared_ptr<Menu::Menu>> all_menu_item_permutations;
+    std::vector<std::vector<int>> all_permutations;
+    std::vector<int> indices(_menu->getMenu().size(), 0);
+    std::vector<int> max_sizes(_menu->getMenu().size());
+    for (int i = 0; i < static_cast<int>(Menu::DishType::NUM_DISH_TYPES); i++)  {
+      max_sizes[i] = _menu->getMenu()[i].size() - 1;
+    }
+    generatePermutations(all_permutations, indices, 0, max_sizes);
+
+    for (int i = 0; i < all_permutations.size(); i++) {
+      std::vector<std::vector<std::shared_ptr<Menu::MenuItem>>> permutation_menu(static_cast<int>(Menu::DishType::NUM_DISH_TYPES));
+      for (int j = 0; j < static_cast<int>(Menu::DishType::NUM_DISH_TYPES); j++) {
+        permutation_menu[j].push_back(_menu->getMenu()[j][all_permutations[i][j]]);
+      }
+      all_menu_item_permutations.push_back(std::make_shared<Menu::Menu>(permutation_menu));
+    }
+
+    return all_menu_item_permutations;
+  }
+
+  std::shared_ptr<Menu::MenuItem> suggestMenuItem(std::shared_ptr<Menu::Menu>& _available_menu, Menu::TasteBalance _taste_balance, Menu::DishType _type) {
+    double minDistance = std::numeric_limits<double>::max();
+    std::shared_ptr<Menu::MenuItem> suggested_menu_item;
+
+    for (auto& item : _available_menu->getMenu()[static_cast<int>(_type)]){
+      double distance = calculateDistance(_taste_balance, item->getTasteBalance());
+      if (distance < minDistance) { // if the distance is less than the minimum distance, then update the minimum distance and the suggested menu item
+        minDistance = distance;
+        suggested_menu_item = item;
+      }
+      else if (distance == minDistance) { // if the distance is equal, then compare the covariances
+        double currentCovariance = calculateCovariance(_taste_balance, item->getTasteBalance());
+        double suggestedCovariance = calculateCovariance(_taste_balance, suggested_menu_item->getTasteBalance());
+        if (currentCovariance < suggestedCovariance) {
+          suggested_menu_item = item;
+        } else {
+          continue;
+        }
+      }
+    }
+
+    return suggested_menu_item;
+  }
+
   std::shared_ptr<Menu::Menu> suggestFullMenu(std::shared_ptr<Menu::Menu>& _available_menu, Menu::TasteBalance _taste_balance) {
-    std::cout << "TEST SUGGEST FULL MENU" << std::endl;
     std::vector<std::shared_ptr<Menu::Menu>> all_menu_item_permutations = generateMenuItemPermutations(_available_menu);
     std::shared_ptr<Menu::Menu> suggested_menu;
     double minDistance = std::numeric_limits<double>::max();
@@ -201,11 +197,11 @@ namespace Interface{
       permutationBalance.savory /= permutation->getMenu().size();
 
       double distance = calculateDistance(_taste_balance, permutationBalance);
-      if (distance < minDistance) {
+      if (distance < minDistance) { // if the distance is less than the minimum distance, then update the minimum distance and the suggested menu
         minDistance = distance;
         suggested_menu = std::make_shared<Menu::Menu>(permutation->getMenu());
       }
-      else if (distance == minDistance) {
+      else if (distance == minDistance) { // if the distance is equal, then compare the covariances
         double currentCovariance = calculateCovariance(_taste_balance, permutationBalance);
         double suggestedCovariance = calculateCovariance(_taste_balance, suggested_menu->getTasteBalance());
         if (currentCovariance < suggestedCovariance) {
