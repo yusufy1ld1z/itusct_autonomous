@@ -7,7 +7,7 @@ mainScreen::mainScreen(QWidget *parent, User::User *_user, QString _window_name)
     , ui(new Ui::mainScreen)
 {
     this->user = _user;
-    std::string file_name = "/home/yildiz/Desktop/gae/autonomous_assignments/itusct_autonomous_weekly5/assignment5_solutions/menuBot/menu.json";
+    std::string file_name = "your_path_to_menu/menu.json";
     std::vector<std::vector<std::shared_ptr<Menu::MenuItem>>> availableMenu(6);
     try {
         Interface::readFromJSON(file_name, availableMenu);
