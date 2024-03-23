@@ -16,7 +16,7 @@ The Restaurant Bot is a sophisticated terminal-based application developed as an
 This introductory screen is the gateway to the Restaurant Bot application. Users are required to enter their personal information, specifically their first name and last name, into the designated text fields. Additionally, users select their preferred form of address (Mr. or Mrs.) through radio buttons, ensuring interactions within the application are personalized and respectful. The interface is straightforward, offering clear instructions and two primary options: "Enter" to proceed with the entered information, and "Quit" to exit the application. This initial interaction sets the tone for user experience, emphasizing simplicity and user-friendliness.
 
 <p align="center">
-  <img src="menuBotUI/data/login.png" alt="Login Screen" width="500" height="500">
+  <img src="menuBotUI/data/login.png" alt="Login Screen" height="500">
 </p>
 
  - **Name Field**: A text box where the user enters their first name.
