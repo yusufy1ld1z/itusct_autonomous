@@ -79,25 +79,31 @@ In this innovative section of the application, users can fine-tune their taste p
 
 ### 6. **Suggestion Bot Results**
 Following user input on the Suggestion Bot Interface, this screen presents the bot's menu recommendations, which are aligned with the user's taste preferences. Each suggested dish is listed with a brief description and price, offering users a glimpse into how each item complements their flavor profile. Users can choose to accept the bot's suggestions in full, modify them, or start the recommendation process anew, demonstrating the application's adaptability and user-friendly design.
+
+<p align="center">
+  <img src="menuBotUI/data/suggestion.png" alt="Suggestion Bot Results" height="400">
+</p>
+ 
  - **Suggested Items List**: Displays the dishes suggested by the bot, aligned with the user's taste preferences.
  - **Add Selected Items to Your Menu Button**: Adds the bot's suggested dishes to the user's menu.
  - **Add All Items to Your Menu Button**: Quickly adds all suggested dishes to the user's menu.
  - **Return to the Main Menu Button**: Returns to the Main Menu for further exploration or action.
 
-<p align="center">
-  <img src="menuBotUI/data/suggestion.png" alt="Suggestion Bot Results" height="400">
-</p>
+
 
 ### 7. **Menu Approval**
 The final step in the user's journey within the Restaurant Bot application, this screen is dedicated to reviewing and finalizing the menu selections. Each chosen item is listed with options for additional customizations that might affect the overall price (e.g., adding extra chocolate to desserts or extra shots to drinks). The total cost is updated in real time, reflecting any changes made. This screen ensures that all selections and customizations meet the user's satisfaction before final approval, emphasizing the application's focus on precision and user satisfaction.
+
+<p align="center">
+  <img src="menuBotUI/data/approve.png" alt="Menu Approval" height="300">
+</p>
+ 
  - **Final Review List**: Shows all selected items along with their specific customizations and additional costs.
  - **Approve Menu Button**: Confirms all selections and customizations, finalizing the user's menu.
  - **Additional Options Checkboxes**: Allow users to apply last-minute additions or changes to their menu, such as extra toppings or modifications to dishes.
  - **Return to Your Menu Button**: Sends the user back to the User Menu for any last-minute changes before finalizing.
 
-<p align="center">
-  <img src="menuBotUI/data/approve.png" alt="Menu Approval" height="300">
-</p>
+
 
 Each screen and its associated features are designed to navigate users through the process of customizing their dining experience with ease, ensuring a smooth and intuitive interaction with the Restaurant Bot application.
 
