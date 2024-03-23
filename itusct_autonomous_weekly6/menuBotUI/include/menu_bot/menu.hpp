@@ -270,11 +270,6 @@ namespace Menu {
     void setTasteBalance(std::vector<int> _taste_balance) { this->taste_balance = TasteBalance(_taste_balance); };
     void setTotalPrice(double _total_price) { this->total_price = _total_price; };
 
-    // /**
-    //  * @brief Prints the menu and the overview of the menu.
-    //  */
-    // void printMenu();
-
     /**
      * @brief Adds a menu item to the menu.
      * @param _item The menu item to add to the menu.
@@ -286,13 +281,6 @@ namespace Menu {
      * @param _name The name of the menu item to remove from the menu.
      */
     void removeMenuItem(std::string _name);
-
-    // /**
-    //  * @brief Finds a menu item by its index in the menu.
-    //  * @param _index The index of the menu item to find.
-    //  * @return A shared pointer to the menu item if found, nullptr otherwise.
-    //  */
-    // std::shared_ptr<MenuItem> findMenuItemByIndex(int _index);
 
     /**
      * @brief Updates the taste balance and total price of the menu after each transaction.

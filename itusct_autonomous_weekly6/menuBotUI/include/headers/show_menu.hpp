@@ -27,6 +27,9 @@ signals:
     void addItem2User(std::shared_ptr<Menu::MenuItem>);
 
 private slots:
+    /**
+     * @brief These dish type functions shows the items in available menu of type which it is related.
+     */
     void on_pushButton_starter_clicked();
 
     void on_pushButton_salad_clicked();
@@ -39,8 +42,14 @@ private slots:
 
     void on_pushButton_dessert_clicked();
 
+    /**
+     * @brief It emits an addition signal with the selected items to add into user menu.
+     */
     void on_pushButton_additem_clicked();
 
+    /**
+     * @brief Signal emitter to return to main menu.
+     */
     void on_pushButton_return_clicked();
 
 private:
@@ -48,6 +57,11 @@ private:
     std::shared_ptr<Menu::Menu> menu;
     Menu::DishType selected_type;
 
+    /**
+     * @brief It iterates over the available menu to find the item by its name.
+     * @param _name Name of menu item to be found.
+     * @return A shared pointer to the found item by name.
+     */
     std::shared_ptr<Menu::MenuItem> findMenuItemByName(std::string _name);
 };
 

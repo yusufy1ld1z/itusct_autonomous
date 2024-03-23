@@ -48,54 +48,6 @@ namespace Interface{
     }
   }
 
-  // bool addItemByType(User::User& _user, std::shared_ptr<Menu::Menu>& _available_menu, Menu::DishType _type) {
-  //   int index = 1;
-  //   std::cout << "++++++++++++++++++++" << std::endl;
-
-  //   for (auto& item: _available_menu->getMenu()[static_cast<int>(_type)]) {
-  //     std::cout << index++ << ". ";
-  //     item->printDish();
-  //     std::cout << "++++++++++++++++++++" << std::endl;
-  //   }
-
-  //   auto is_numeric = [](const std::string &str) -> bool { // check whether the string is numeric or not, this function also controls the negative numbers
-  //     return !str.empty() && std::find_if(str.begin(),
-  //                                         str.end(), [](unsigned char c) { return !std::isdigit(c); }) == str.end(); // control the string digit by digit to be numeric
-  //   };
-
-  //   int choice;
-  //   std::cout << "Which item would you like to add?" << std::endl;
-  //   std::string choice_str;
-  //   std::cin >> choice_str;
-  //   if (is_numeric(choice_str)) {
-  //     if(std::stoi(choice_str) < 1 || std::stoi(choice_str) > _available_menu->getMenu()[static_cast<int>(_type)].size()){
-  //       std::cout << "Invalid input. Please enter a valid number." << std::endl;
-  //       sleep(1);
-  //       return false;
-  //     }
-  //     choice = std::stoi(choice_str);
-  //   } else {
-  //     std::cout << "Invalid input. Please enter a number." << std::endl;
-  //     sleep(1);
-  //     return false;
-  //   }
-
-  //   std::shared_ptr<Menu::MenuItem> newItem = _available_menu->getMenu()[static_cast<int>(_type)][choice - 1];
-  //   std::cout << "Chosen item is: " << std::endl;
-  //   std::cout << "++++++++++++++++++++" << std::endl;
-  //   newItem->printDish();
-  //   std::cout << "++++++++++++++++++++" << std::endl;
-  //   std::cout << "\nAre you sure to add this item?(Y or N)" << std::endl;
-  //   char confirm;
-  //   std::cin >> confirm;
-  //   if (confirm == 'Y' || confirm == 'y') {
-  //     _user.getMenu()->addMenuItem(newItem);
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-
   double calculateDistance(const Menu::TasteBalance& _balance1, const Menu::TasteBalance& _balance2) {
     return std::sqrt(std::pow(_balance1.sweet - _balance2.sweet, 2) +
                      std::pow(_balance1.sour - _balance2.sour, 2) +

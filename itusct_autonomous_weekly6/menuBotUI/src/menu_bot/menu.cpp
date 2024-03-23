@@ -59,57 +59,6 @@ namespace Menu {
     setTasteBalance(std::vector<int>{0, 0, 0, 0, 0});
   }
 
-  // void Menu::printMenu() {
-  //   std::cout << "**********Your Menu**********" << std::endl;
-  //   for (int i = 0; i < static_cast<int>(DishType::NUM_DISH_TYPES); i++) {
-  //     DishType type = static_cast<DishType>(i);
-  //     std::string dish_type;
-  //     switch (type) {
-  //       case DishType::STARTER:
-  //         std::cout << "Starters" << std::endl;
-  //         dish_type = "Starters";
-  //         break;
-  //       case DishType::SALAD:
-  //         std::cout << "Salads" << std::endl;
-  //         dish_type = "Salads";
-  //         break;
-  //       case DishType::MAIN_COURSE:
-  //         std::cout << "Main Courses" << std::endl;
-  //         dish_type = "Main Courses";
-  //         break;
-  //       case DishType::DRINK:
-  //         std::cout << "Drinks" << std::endl;
-  //         dish_type = "Drinks";
-  //         break;
-  //       case DishType::APPETIZER:
-  //         std::cout << "Appetizers" << std::endl;
-  //         dish_type = "Appetizers";
-  //         break;
-  //       case DishType::DESSERT:
-  //         std::cout << "Desserts" << std::endl;
-  //         dish_type = "Desserts";
-  //         break;
-  //     }
-  //     if(this->menu[i].empty()){
-  //       std::cout << "----------------" << std::endl;
-  //       std::cout << "Empty Preference for Dish Type: " << dish_type << std::endl;
-  //       std::cout << "----------------" << std::endl;
-  //     } else {
-  //       std::cout << "----------------" << std::endl;
-  //       for (auto &item: this->menu[i]) {
-  //         item->printDish();
-  //         std::cout << "----------------" << std::endl;
-  //       }
-  //     }
-  //   }
-  //   std::cout << "**********End**********" << std::endl;
-  //   std::cout << "**********Overview of Your Menu**********" << std::endl;
-  //   std::cout << "Total Price: " << this->total_price << std::endl;
-  //   std::cout << "----------------" << std::endl;
-  //   this->taste_balance.print();
-  //   std::cout << "**********End of Overview**********" << std::endl;
-  // }
-
   void Menu::addMenuItem(std::shared_ptr<MenuItem> _item) {
     if(typeid((*_item)) == typeid(Starter)) this->menu[STARTER].push_back(_item);
     else if(typeid((*_item)) == typeid(Salads)) this->menu[SALAD].push_back(_item);
@@ -132,21 +81,6 @@ namespace Menu {
       }
     }
   }
-
-  // std::shared_ptr<MenuItem> Menu::findMenuItemByIndex(int _index) {
-  //   int idx = 1;
-  //   for (int i = 0; i < static_cast<int>(DishType::NUM_DISH_TYPES); i++) {
-  //     if (this->menu[i].empty()) continue;
-  //     else{
-  //       for (auto &item: this->menu[i]) {
-  //         if (idx++ == _index) {
-  //           return item;
-  //         }
-  //       }
-  //     }
-  //   }
-  //   return nullptr;
-  // }
 
   void Menu::updateTasteBalanceAndPrice() {
     std::vector<int> taste_bal(static_cast<int>(Taste::NUM_TASTES), 0);

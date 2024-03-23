@@ -20,8 +20,14 @@ public:
     ~loginScreen();
 
 private slots:
+    /**
+     * @brief It fills up the user informations after validation of inputs, then enters the main_screen window.
+     */
     void on_pushButton_enter_clicked();
 
+    /**
+     * @brief It says goodbye to the user.
+     */
     void on_pushButton_quit_clicked();
 
 private:

@@ -30,7 +30,6 @@ void approveMenu::addDishWidgets(){
 
     for (int i = 0; i < static_cast<int>(Menu::DishType::NUM_DISH_TYPES); i++) {
         Menu::DishType type = static_cast<Menu::DishType>(i);
-        // std::string dish_type;
         switch (type) {
         case Menu::DishType::STARTER:
 

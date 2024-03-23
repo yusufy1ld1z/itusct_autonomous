@@ -25,15 +25,6 @@ namespace Interface{
    */
   void readFromJSON(std::string _file_name, std::vector<std::vector<std::shared_ptr<Menu::MenuItem>>>& _menu);
 
-  // /**
-  //  * @brief Adds a menu item with specified dish type to the user's menu.
-  //  * @param _user The user object to add the menu item to.
-  //  * @param _available_menu The available menu of the restaurant.
-  //  * @param _type The type of the dish to add.
-  //  * @return True if the item is added successfully, false otherwise.
-  //  */
-  // bool addItemByType(User::User& _user, std::shared_ptr<Menu::Menu>& _available_menu, Menu::DishType _type);
-
   /**
    * @brief Calculate mean square distance between two taste balances.
    * @param _balance1 The first taste balance to compare.

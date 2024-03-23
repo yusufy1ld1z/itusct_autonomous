@@ -45,16 +45,6 @@ namespace User{
     void setFirstName(std::string _first_name) { first_name = _first_name; };
     void setLastName(std::string _last_name) { last_name = _last_name; };
     void setGender(Gender _gender) { gender_to_address = _gender; }
-
-    // /**
-    //  * @brief Function to approve the menu items for the user.
-    //  *
-    //  * This function is called just before the end to make sure user approves the menu items.
-    //  * It also asks for extra services, then update the menu items, and also the total price.
-    //  *
-    //  * @return True if the user approves the menu, false otherwise.
-    //  */
-    // bool approveMenu();
   };
 } // End namespace User
 #endif //MENU_BOT_USER_HPP

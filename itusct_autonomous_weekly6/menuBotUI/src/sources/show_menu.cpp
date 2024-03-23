@@ -18,7 +18,7 @@ showMenu::~showMenu()
     delete ui;
 }
 
-void showMenu::on_pushButton_starter_clicked() // TODO: her urun icin ekstra ozellikleri de yazdir. Renkleri degistir ve gorseller ekle. Approve menu'yu yaz.
+void showMenu::on_pushButton_starter_clicked()
 {
     ui->listWidget->clear();
     for (auto it = this->menu->getMenu()[Menu::DishType::STARTER].begin(); it != this->menu->getMenu()[Menu::DishType::STARTER].end(); it++) {

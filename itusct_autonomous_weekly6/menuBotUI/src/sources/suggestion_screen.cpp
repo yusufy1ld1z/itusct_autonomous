@@ -112,7 +112,6 @@ void suggestionScreen::on_pushButton_sugItem_clicked()
 
 void suggestionScreen::on_pushButton_sugMenu_clicked()
 {
-    // menu suggestion, read the sliders, and add the menu items to list widget
     ui->listWidget->clear();
     Menu::TasteBalance taste_balance;
     taste_balance.sweet = std::stoi(ui->label_sweet->text().toStdString());
