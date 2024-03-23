@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>showItems</class>
+ <widget class="QDialog" name="showItems">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1340</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QListWidget {
+	font-family: Consolas, Courier, monospace;
+}
+
+/* Style for deselected items */
+QListWidget::item {
+	font-size: 5pt;
+    border: 1px solid black; /* Add a border to all items */
+    padding: 5px; /* Add padding to create space around the content */
+}
+
+/* Style for selected items */
+QListWidget::item:selected {
+    background-color: lightblue; /* Change background color for selected items */
+    color: black; /* Ensure text color remains visible */
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="1">
+      <widget class="QListWidget" name="listWidget_salad">
+       <property name="font">
+        <font>
+         <family>Consolas</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QListWidget {
+	font-family: Consolas, Courier, monospace;
+}
+
+/* Style for deselected items */
+QListWidget::item {
+	font-size: 3pt;
+    border: 1px solid black; /* Add a border to all items */
+    padding: 5px; /* Add padding to create space around the content */
+}
+
+/* Style for selected items */
+QListWidget::item:selected {
+    background-color: lightblue; /* Change background color for selected items */
+    color: black; /* Ensure text color remains visible */
+}</string>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::MultiSelection</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QListWidget" name="listWidget_drink">
+       <property name="font">
+        <font>
+         <family>Consolas</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QListWidget {
+	font-family: Consolas, Courier, monospace;
+}
+
+/* Style for deselected items */
+QListWidget::item {
+	font-size: 3pt;
+    border: 1px solid black; /* Add a border to all items */
+    padding: 5px; /* Add padding to create space around the content */
+}
+
+/* Style for selected items */
+QListWidget::item:selected {
+    background-color: lightblue; /* Change background color for selected items */
+    color: black; /* Ensure text color remains visible */
+}</string>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::MultiSelection</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QListWidget" name="listWidget_mainCourse">
+       <property name="font">
+        <font>
+         <family>Consolas</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QListWidget {
+	font-family: Consolas, Courier, monospace;
+}
+
+/* Style for deselected items */
+QListWidget::item {
+	font-size: 3pt;
+    border: 1px solid black; /* Add a border to all items */
+    padding: 5px; /* Add padding to create space around the content */
+}
+
+/* Style for selected items */
+QListWidget::item:selected {
+    background-color: lightblue; /* Change background color for selected items */
+    color: black; /* Ensure text color remains visible */
+}</string>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::MultiSelection</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QListWidget" name="listWidget_dessert">
+       <property name="font">
+        <font>
+         <family>Consolas</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QListWidget {
+	font-family: Consolas, Courier, monospace;
+}
+
+/* Style for deselected items */
+QListWidget::item {
+	font-size: 3pt;
+    border: 1px solid black; /* Add a border to all items */
+    padding: 5px; /* Add padding to create space around the content */
+}
+
+/* Style for selected items */
+QListWidget::item:selected {
+    background-color: lightblue; /* Change background color for selected items */
+    color: black; /* Ensure text color remains visible */
+}</string>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::MultiSelection</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QListWidget" name="listWidget_starter">
+       <property name="font">
+        <font>
+         <family>Consolas</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QListWidget {
+	font-family: Consolas, Courier, monospace;
+}
+
+/* Style for deselected items */
+QListWidget::item {
+	font-size: 3pt !important;
+    border: 1px solid black; /* Add a border to all items */
+    padding: 5px; /* Add padding to create space around the content */
+}
+
+/* Style for selected items */
+QListWidget::item:selected {
+    background-color: lightblue; /* Change background color for selected items */
+    color: black; /* Ensure text color remains visible */
+}</string>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::MultiSelection</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3" rowspan="2">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label_icon">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEdit_menuOverall">
+         <property name="styleSheet">
+          <string notr="true">QTextEdit {
+	font-family: Consolas, Courier, monospace;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_approveMenu">
+         <property name="text">
+          <string>Approve Your Menu</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_remove">
+         <property name="text">
+          <string>Remove Selected Items</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_returnMain">
+         <property name="text">
+          <string>Return to Main Menu</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="1">
+      <widget class="QListWidget" name="listWidget_appetizer">
+       <property name="font">
+        <font>
+         <family>Consolas</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QListWidget {
+	font-family: Consolas, Courier, monospace;
+}
+
+/* Style for deselected items */
+QListWidget::item {
+	font-size: 3pt;
+    border: 1px solid black; /* Add a border to all items */
+    padding: 5px; /* Add padding to create space around the content */
+}
+
+/* Style for selected items */
+QListWidget::item:selected {
+    background-color: lightblue; /* Change background color for selected items */
+    color: black; /* Ensure text color remains visible */
+}</string>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::MultiSelection</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
