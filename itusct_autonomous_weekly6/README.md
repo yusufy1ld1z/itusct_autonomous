@@ -15,7 +15,7 @@ The Restaurant Bot is a sophisticated terminal-based application developed as an
 ### 1. **Login Screen**
 This introductory screen is the gateway to the Restaurant Bot application. Users are required to enter their personal information, specifically their first name and last name, into the designated text fields. Additionally, users select their preferred form of address (Mr. or Mrs.) through radio buttons, ensuring interactions within the application are personalized and respectful. The interface is straightforward, offering clear instructions and two primary options: "Enter" to proceed with the entered information, and "Quit" to exit the application. This initial interaction sets the tone for user experience, emphasizing simplicity and user-friendliness.
 
-![Login Screen](./data/login.png)
+![Login Screen](menuBotUI/data/login.png)
 
  - **Name Field**: A text box where the user enters their first name.
  - **Surname Field**: A text box for entering the user's last name.
@@ -28,7 +28,7 @@ This introductory screen is the gateway to the Restaurant Bot application. Users
 ### 2. **Main Menu**
 Upon successful login, users arrive at the Main Menu, which represents the heart of the application. This screen features the ITU ZES Solar Car Team's logo, reinforcing the project's academic and team-oriented background. The main menu is designed with clear, concise options that guide the user through the application: "See the Menu" to browse the full list of available dishes, "See Your Items" to view selected items, "Use Suggestion Bot" for automated, personalized menu recommendations, and "Exit" to leave the application. This screen is pivotal, as it directs users to the various functionalities of the Restaurant Bot, allowing for an intuitive and efficient navigation experience.
 
-![Main Menu Screen](./data/main_window.png)
+![Main Menu Screen](menuBotUI/data/main_window.png)
 
  - **See the Menu Button**: Transitions to the Available Menu screen, allowing users to browse the restaurant's offerings.
  - **See Your Items Button**: Displays the User Menu screen, where users can review items they have previously selected.
@@ -39,7 +39,7 @@ Upon successful login, users arrive at the Main Menu, which represents the heart
 ### 3. **Available Menu**
 This screen showcases the range of dishes available within the Restaurant Bot's database. Each menu item is listed alongside its price and a detailed "Taste Balance" profile, which includes metrics such as sweetness, sourness, saltiness, bitterness, and savoriness. This feature is particularly useful for users with specific dietary preferences or those looking to explore different flavor profiles. Additionally, the interface includes options to navigate back or add selected items to the user's personal menu, facilitating a seamless selection process.
 
- ![Available Menu](./data/show_menu.png)
+ ![Available Menu](menuBotUI/data/show_menu.png)
  
  - **Menu Items List**: Displays available dishes with details such as name, price, and taste balance (sweet, sour, salty, bitter, savory).
  - **Add Selected Items to Your Menu Button**: Adds the user's chosen dishes to their personal menu for later review.
@@ -48,7 +48,7 @@ This screen showcases the range of dishes available within the Restaurant Bot's 
 ### 4. **User Menu**
 After selecting items from the available menu, users can review their personalized menu on this screen. It lists all chosen items along with specific user preferences for each dish (e.g., temperature for starters, additional toppings for salads). This screen also displays the total cost, allowing users to make informed decisions based on their budget. The interface enables users to approve their menu or return to previous screens to make changes, providing a flexible and user-centric decision-making environment.
 
-  ![User Menu](./data/user_menu.png)
+  ![User Menu](menuBotUI/data/user_menu.png)
   
  - **List of Selected Items**: Shows dishes that the user has added to their menu, along with customization options selected for each item.
  - **Total Price**: The cumulative cost of all selected items, reflecting any additional customizations.
@@ -60,7 +60,7 @@ After selecting items from the available menu, users can review their personaliz
 ### 5. **Suggestion Bot Interface**
 In this innovative section of the application, users can fine-tune their taste preferences using sliders for different flavor profiles: sweet, sour, salty, bitter, and savory. This input directly influences the Suggestion Bot's algorithm, which is designed to tailor menu recommendations according to these specified tastes. This feature exemplifies the application's commitment to providing a customized dining experience, catering to the unique preferences of each user.
  
-  ![Suggestion Bot Interface](./data/suggest_item.png)
+  ![Suggestion Bot Interface](menuBotUI/data/suggest_item.png)
  
  - **Taste Preferences Sliders**: Allows users to set their preferences for sweet, sour, salty, bitter, and savory tastes, influencing the bot's menu suggestions.
  - **Suggest Menu Item Button**: Commands the bot to suggest a single dish based on the adjusted taste preferences.
@@ -76,7 +76,7 @@ Following user input on the Suggestion Bot Interface, this screen presents the b
  - **Return to the Suggestion Bot Button**: Goes back to the Suggestion Bot Interface for taste preference adjustments or new suggestions.
  - **Return to the Main Menu Button**: Returns to the Main Menu for further exploration or action.
 
- ![Suggestion Bot Results](./data/suggestion.png)
+ ![Suggestion Bot Results](menuBotUI/data/suggestion.png)
 
 ### 7. **Menu Approval**
 The final step in the user's journey within the Restaurant Bot application, this screen is dedicated to reviewing and finalizing the menu selections. Each chosen item is listed with options for additional customizations that might affect the overall price (e.g., adding extra chocolate to desserts or extra shots to drinks). The total cost is updated in real-time, reflecting any changes made. This screen ensures that all selections and customizations meet the user's satisfaction before final approval, emphasizing the application's focus on precision and user satisfaction.
@@ -85,7 +85,7 @@ The final step in the user's journey within the Restaurant Bot application, this
  - **Additional Options Checkboxes**: Allow users to apply last-minute additions or changes to their menu, such as extra toppings or modifications to dishes.
  - **Return to Your Menu Button**: Sends the user back to the User Menu for any last-minute changes before finalizing.
 
- ![Menu Approval](./data/approve.png)
+ ![Menu Approval](menuBotUI/data/approve.png)
 
 Each screen and its associated features are designed to navigate users through the process of customizing their dining experience with ease, ensuring a smooth and intuitive interaction with the Restaurant Bot application.
 
