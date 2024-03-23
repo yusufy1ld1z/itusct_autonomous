@@ -1,7 +1,7 @@
 # Restaurant Bot
 
 ## Overview
-The Restaurant Bot is a sophisticated terminal-based application developed as an assignment for the Istanbul Technical University's ITU ZES Solar Car Team. This project exemplifies the practical application of Object-Oriented Programming (OOP) concepts in C++, particularly focusing on encapsulation, inheritance, and polymorphism, all within the context of a user-interactive command-line interface (CLI). The primary function of this bot is to aid users in assembling personalized meal plans based on individual taste preferences and dietary requirements, streamlining the process of menu selection with an intuitive, dialogue-based system.
+The Restaurant Bot is a sophisticated Qt application developed as an assignment for the Istanbul Technical University's ITU ZES Solar Car Team. This project exemplifies the practical application of Object-Oriented Programming (OOP) concepts in C++, particularly focusing on encapsulation, inheritance, and polymorphism, all within the context of a graphical user interface (GUI). The primary function of this bot is to aid users in assembling personalized meal plans based on individual taste preferences and dietary requirements, streamlining the process of menu selection with an intuitive, dialogue-based system.
 
 ## Features
 - **User Information Input**: Captures essential details such as the user's name, surname, and preferred title, enhancing personalized interaction throughout the meal selection process.
@@ -24,7 +24,6 @@ This introductory screen is the gateway to the Restaurant Bot application. Users
  - **Gender to Address**: Radio buttons allowing the user to select "Mr" or "Mrs" as the form of address, ensuring personalized interaction throughout the application.
  - **Enter Button**: Confirms the entered information and proceeds to the Main Menu.
  - **Quit Button**: Exits the application, useful for users who decide not to proceed for any reason.
-
 
 
 ### 2. **Main Menu**
@@ -73,7 +72,7 @@ In this innovative section of the application, users can fine-tune their taste p
 </p>
  
  - **Taste Preferences Sliders**: Allows users to set their preferences for sweet, sour, salty, bitter, and savory tastes, influencing the bot's menu suggestions.
- - **Suggest Menu Item Button**: Commands the bot to suggest a single dish based on the adjusted taste preferences.
+ - **Suggest Menu Item Button**: Commands the bot to suggest a single dish based on the adjusted taste preferences and dish type.
  - **Suggest Full Menu Button**: Instructs the bot to compile a complete menu tailored to the user's taste preferences.
  - **Return to Main Menu Button**: Lets users exit the Suggestion Bot interface and return to the Main Menu.
 
@@ -83,7 +82,6 @@ Following user input on the Suggestion Bot Interface, this screen presents the b
  - **Suggested Items List**: Displays the dishes suggested by the bot, aligned with the user's taste preferences.
  - **Add Selected Items to Your Menu Button**: Adds the bot's suggested dishes to the user's menu.
  - **Add All Items to Your Menu Button**: Quickly adds all suggested dishes to the user's menu.
- - **Return to the Suggestion Bot Button**: Goes back to the Suggestion Bot Interface for taste preference adjustments or new suggestions.
  - **Return to the Main Menu Button**: Returns to the Main Menu for further exploration or action.
 
 <p align="center">
@@ -91,14 +89,14 @@ Following user input on the Suggestion Bot Interface, this screen presents the b
 </p>
 
 ### 7. **Menu Approval**
-The final step in the user's journey within the Restaurant Bot application, this screen is dedicated to reviewing and finalizing the menu selections. Each chosen item is listed with options for additional customizations that might affect the overall price (e.g., adding extra chocolate to desserts or extra shots to drinks). The total cost is updated in real-time, reflecting any changes made. This screen ensures that all selections and customizations meet the user's satisfaction before final approval, emphasizing the application's focus on precision and user satisfaction.
+The final step in the user's journey within the Restaurant Bot application, this screen is dedicated to reviewing and finalizing the menu selections. Each chosen item is listed with options for additional customizations that might affect the overall price (e.g., adding extra chocolate to desserts or extra shots to drinks). The total cost is updated in real time, reflecting any changes made. This screen ensures that all selections and customizations meet the user's satisfaction before final approval, emphasizing the application's focus on precision and user satisfaction.
  - **Final Review List**: Shows all selected items along with their specific customizations and additional costs.
  - **Approve Menu Button**: Confirms all selections and customizations, finalizing the user's menu.
  - **Additional Options Checkboxes**: Allow users to apply last-minute additions or changes to their menu, such as extra toppings or modifications to dishes.
  - **Return to Your Menu Button**: Sends the user back to the User Menu for any last-minute changes before finalizing.
 
 <p align="center">
-  <img src="menuBotUI/data/approve.png" alt="Menu Approval" height="400">
+  <img src="menuBotUI/data/approve.png" alt="Menu Approval" height="300">
 </p>
 
 Each screen and its associated features are designed to navigate users through the process of customizing their dining experience with ease, ensuring a smooth and intuitive interaction with the Restaurant Bot application.
@@ -106,8 +104,9 @@ Each screen and its associated features are designed to navigate users through t
 ## Installation and Setup
 1. Clone the repository to your local machine.
 2. Ensure a C++ compiler is installed on your system.
-3. Compile the code by navigating to the project directory and using the C++ compiler commands.
-4. Execute the compiled application to start interacting with the Restaurant Bot.
+3. It is recommended to use the Qt Creator application to build and modify the project.
+4. Update the menu.json path with your exact path inside the main_screen.cpp constructor.
+5. Navigate through the Restaurant Bot for an elegant tour.
 
 ## Usage
 Navigate through the application by following the on-screen prompts:
