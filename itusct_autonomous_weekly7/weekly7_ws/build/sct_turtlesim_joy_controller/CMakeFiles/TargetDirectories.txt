@@ -1,0 +1,10 @@
+/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_turtlesim_joy_controller/CMakeFiles/uninstall.dir
+/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_turtlesim_joy_controller/CMakeFiles/sct_turtlesim_joy_controller_uninstall.dir
+/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_turtlesim_joy_controller/CMakeFiles/joy_controller.dir
+/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_turtlesim_joy_controller/CMakeFiles/test.dir
+/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_turtlesim_joy_controller/CMakeFiles/edit_cache.dir
+/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_turtlesim_joy_controller/CMakeFiles/rebuild_cache.dir
+/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_turtlesim_joy_controller/CMakeFiles/list_install_components.dir
+/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_turtlesim_joy_controller/CMakeFiles/install.dir
+/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_turtlesim_joy_controller/CMakeFiles/install/local.dir
+/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_turtlesim_joy_controller/CMakeFiles/install/strip.dir

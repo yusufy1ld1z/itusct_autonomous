@@ -1,0 +1,30 @@
+[0.009s] Invoking command in '/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_img_filter': CMAKE_PREFIX_PATH=/opt/ros/humble /home/yildiz/.local/bin/cmake --build /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_img_filter -- -j16 -l16
+[0.059s] [ 50%] Built target img_publisher
+[0.059s] [100%] Built target img_filterer
+[0.067s] Invoked command in '/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_img_filter' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/yildiz/.local/bin/cmake --build /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_img_filter -- -j16 -l16
+[0.134s] Invoking command in '/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_img_filter': CMAKE_PREFIX_PATH=/opt/ros/humble /home/yildiz/.local/bin/cmake --install /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_img_filter
+[0.155s] -- Install configuration: ""
+[0.155s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/lib/sct_img_filter/img_publisher
+[0.156s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/lib/sct_img_filter/img_filterer
+[0.156s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/launch
+[0.156s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/launch/img_pub_filter.launch.py
+[0.156s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/config
+[0.156s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/config/config.yaml
+[0.156s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/data
+[0.156s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/data/YARGI.mp4
+[0.156s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/ament_index/resource_index/package_run_dependencies/sct_img_filter
+[0.156s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/ament_index/resource_index/parent_prefix_path/sct_img_filter
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/environment/ament_prefix_path.sh
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/environment/ament_prefix_path.dsv
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/environment/path.sh
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/environment/path.dsv
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/local_setup.bash
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/local_setup.sh
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/local_setup.zsh
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/local_setup.dsv
+[0.157s] -- Installing: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/package.dsv
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/ament_index/resource_index/packages/sct_img_filter
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/cmake/sct_img_filterConfig.cmake
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/cmake/sct_img_filterConfig-version.cmake
+[0.157s] -- Up-to-date: /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/install/sct_img_filter/share/sct_img_filter/package.xml
+[0.168s] Invoked command in '/home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_img_filter' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/yildiz/.local/bin/cmake --install /home/yildiz/Desktop/forgit/itusct_autonomous/itusct_autonomous_weekly7/weekly7_ws/build/sct_img_filter
