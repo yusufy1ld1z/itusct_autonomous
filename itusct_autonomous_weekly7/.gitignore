@@ -1,10 +1,12 @@
-**/.vscode/
-.cproject
-.project
-.pydevproject
-cmake_install.cmake
-build/
-bin/
-lib/
-msg_gen/
-srv_gen/
+# Ignore build, install, and log folders
+/build/
+/install/
+/log/
+
+# Ignore cmake-build-debug folders inside src directory
+/src/**/cmake-build-debug/
+
+# Ignore any compiled binaries or object files
+*.o
+*.out
+*.exe
