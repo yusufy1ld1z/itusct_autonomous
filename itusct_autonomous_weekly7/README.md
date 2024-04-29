@@ -1,10 +1,10 @@
 
 ---
 
-# ITU ZES Solar Car Team ROS2 Project: Image Processing and Joystick-Controlled Turtlesim
+# Image Filterer and Joystick-Controlled Turtlesim
 
 ## Overview
-This project combines image processing with OpenCV filters and a joystick-controlled turtlesim simulation to demonstrate various ROS2 concepts such as publishers, subscribers, services, and OpenCV usage. The project allows you to interact with a simulated turtle using a joystick and apply image processing filters to video data.
+This project combines image processing with OpenCV filters and a joystick-controlled turtlesim simulation to demonstrate various ROS2 concepts such as publishers, subscribers, services, and OpenCV usage. The project allows you to interact with a simulated turtle using a joystick and apply image processing filters to video data using OpenCV.
 
 ## Installation
 1. **ROS2 Humble**: Ensure you have ROS2 Humble installed on your system. Refer to the [official ROS2 installation guide](https://docs.ros.org/en/humble/Installation.html) for detailed instructions.
