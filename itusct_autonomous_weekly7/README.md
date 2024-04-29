@@ -71,7 +71,7 @@ This project combines image processing with OpenCV filters and a joystick-contro
     - **`JoyControllerNode`**: Subscribes to joystick inputs and controls the turtlesim simulation accordingly.
 
 ## Credits
-- Give credits to my colleague [Umut Ozkan](https://github.com/umut-ozkan) for his contribution to this project.
+Give credits to my colleague [Umut Ozkan](https://github.com/umut-ozkan) for his contribution to this project.
 
 ## Contact
-- Should you encounter any issues or have questions regarding the Restaurant Bot, please reach out to Yusuf YILDIZ at [yousufy1ld1z@gmail.com](mailto:yousufy1ld1z@gmail.com).
+Should you encounter any issues or have questions regarding the Restaurant Bot, please reach out to Yusuf YILDIZ at [yousufy1ld1z@gmail.com](mailto:yousufy1ld1z@gmail.com).
