@@ -73,3 +73,5 @@ This project combines image processing with OpenCV filters and a joystick-contro
 ## Credits
 - Give credits to my colleague [Umut Ozkan](https://github.com/umut-ozkan) for his contribution to this project.
 
+## Contact
+- Should you encounter any issues or have questions regarding the Restaurant Bot, please reach out to Yusuf YILDIZ at [yousufy1ld1z@gmail.com](mailto:yousufy1ld1z@gmail.com).
