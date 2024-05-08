@@ -111,7 +111,7 @@ inline Region region(const Point3D& p)
 
 inline bool in_same_region(const Point3D& p1, const Point3D& p2)
 {
-    if(in_same_subregion(p1.x, p2.x) && in_same_subregion(p1.x, p2.y) &&
+    if(in_same_subregion(p1.x, p2.x) && in_same_subregion(p1.y, p2.y) &&
         in_same_subregion(p1.z, p2.z)){
             return true;
         }else return false;
