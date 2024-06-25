@@ -332,5 +332,5 @@ int main () {
 ```
 
 ## Contact
-Should you encounter any issues or have questions regarding the Restaurant Bot,
+Should you encounter any issues or have questions regarding the C++ Variables project,
 please reach out to Yusuf YILDIZ at [yousufy1ld1z@gmail.com](mailto:yousufy1ld1z@gmail.com).
