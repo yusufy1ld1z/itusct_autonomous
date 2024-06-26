@@ -190,6 +190,8 @@ std::weak_ptr is a non-owning smart pointer that holds a weak reference to an ob
         std::shared_ptr<int> ptr4 = weakPtr.lock(); // Attempt to lock the weak_ptr
         if (ptr4 == nullptr) {
             std::cout << "ptr4 is empty (nullptr) because weakPtr expired." << std::endl;
+        } else {
+            std::cout << "value through weakPtr.lock(): " << *ptr4 << std::endl;
         }
 
         return 0;
