@@ -9,6 +9,7 @@ int main() {
     Matrix<int> mat2(matrix<int>{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}); // Initialize from a matrix
     Matrix<int> mat3(vector<int>{1, 2, 3}); // Initialize from a vector
     Matrix<double> mat31 = Matrix<double>::identity(5); // Identity matrix
+    Matrix<double> mat32(matrix<double>{{0, 1, 2}, {1, 2, 3}, {3, 1, 1}}); // Test for inverse
     Matrix<int> mat4(mat2); // Copy constructor
 
     // Testing matrix operations
@@ -23,6 +24,7 @@ int main() {
     // Testing determinant, inverse, and trace
     double det = mat31.determinant();
     Matrix<double> inv = mat31.inverse();
+    Matrix<double> inv2 = mat32.inverse();
     double trace = mat31.trace();
 
     Matrix<int> mat12 = Matrix<int>::add(mat2, mat1); // Addition
@@ -44,6 +46,7 @@ int main() {
     std::cout << "Matrix 13 (Matrix 2 - Matrix 1 - Static  subtraction):\n" << mat13 << std::endl;
     std::cout << "Determinant of Matrix 31: " << det << std::endl;
     std::cout << "Inverse of Matrix 31:\n" << inv << std::endl;
+    std::cout << "Inverse of Matrix 32:\n" << inv2 << std::endl;
     std::cout << "Inverse of Matrix 31 * Matrix 31:\n" << Matrix<double>::dot(mat31, inv) << std::endl;
     std::cout << "Trace of Matrix 2: " << trace << std::endl;
 

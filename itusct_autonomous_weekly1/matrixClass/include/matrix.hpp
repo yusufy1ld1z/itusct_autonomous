@@ -63,6 +63,7 @@ class Matrix{
                     inv.m_matrix[i][j] = pow(-1, i + j) * minor(m_matrix, i, j).determinant() / det;
                 }
             }
+            inv = inv.transpose();
         }
         return inv;
     };
@@ -119,7 +120,7 @@ class Matrix{
         Matrix<T> trans(m_cols, m_rows);
         for(int i = 0; i < m_cols; i++){
             for(int j = 0; j < m_rows; j++){
-                trans[i][j] = m_matrix[j][i];
+                trans.m_matrix[i][j] = m_matrix[j][i];
             }
         }
         return trans;
